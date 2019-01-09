@@ -1,6 +1,6 @@
-package Sample.Actions;
+package ASU.Actions;
 
-import Sample.Locators.WebStandardLocator;
+import ASU.Locators.WebStandardLocator;
 import org.junit.Assert;
 
 public class WebStandardAction extends WebStandardLocator {

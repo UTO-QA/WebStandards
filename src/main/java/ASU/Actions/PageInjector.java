@@ -1,4 +1,4 @@
-package Sample.Actions;
+package ASU.Actions;
 
 import org.fluentlenium.core.annotation.Page;
 import org.fluentlenium.cucumber.adapter.FluentCucumberTest;
