@@ -22,6 +22,9 @@ public class WebStandardLocator extends FluentPage {
     @FindBy(css="#asu_logo a")
     public FluentWebElement asuLogo;
 
+    @FindBy(css="#asu_logo a img")
+    public FluentWebElement asuLogoImage;
+
     @FindBy(css = ".asu_hdr_white")
     public FluentWebElement whiteHeader;
 

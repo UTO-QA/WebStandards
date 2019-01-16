@@ -69,8 +69,8 @@ public class WebStandardAction extends WebStandardLocator {
         Assert.assertEquals("Asu logo is not positioned at top","_top",asuLogo.getAttribute("target"));
         Assert.assertEquals("Asu logo url is incorrect","https://www.asu.edu/", asuLogo.getAttribute("href"));
         Assert.assertTrue("Asu logo font is not correct",asuLogo.getElement().getCssValue("font-family").contains("sans-serif"));
-        Assert.assertTrue("Asu logo font is not correct",asuLogo.getElement().getCssValue("height").contains("36px"));
-        Assert.assertTrue("Asu logo font is not correct",asuLogo.getElement().getCssValue("width").contains("200px"));
+        Assert.assertTrue("Asu logo height is not correct",asuLogoImage.getElement().getCssValue("height").contains("36px"));
+        Assert.assertTrue("Asu logo width is not correct",asuLogoImage.getElement().getCssValue("width").contains("200px"));
     }
 
     public void enterKeywordforSearch(String keyword){
@@ -96,7 +96,7 @@ public class WebStandardAction extends WebStandardLocator {
     public void verifyHomeIconStandards(){
         Assert.assertEquals("Font-family of home icon is not correct", "FontAwesome",homeIcon.getElement().getCssValue("font-family"));
         Assert.assertEquals("Font size of home icon is not correct","16px",homeIcon.getElement().getCssValue("font-size"));
-        Assert.assertTrue("Home Icon color is not correct",homeIcon.getElement().getCssValue("color").contains("237, 237, 237"));
+        Assert.assertTrue("Home Icon color is not correct",homeIcon.getElement().getCssValue("color").contains("255, 178, 4, 1"));
         Assert.assertEquals("Font-style of home icon is not correct", "normal",homeIcon.getElement().getCssValue("font-style"));
     }
 

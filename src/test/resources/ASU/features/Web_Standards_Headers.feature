@@ -19,7 +19,7 @@ Feature: Verifying ASU Web Standard Headers
     Then User should be navigate to Colleges and Schools home page
 
   Scenario: Maps and Locations in global links
-    Then User clicks on "Maps and Location" link
+    Then User clicks on "Map and Locations" link
     Then User should be navigated to the Maps page
 
   Scenario: Directory in global links

@@ -1,6 +1,5 @@
 Feature: Validate various button types
 
-
   Scenario: ASU Recruitment related buttons
     When I navigate to "https://admission.asu.edu/"
     Then I validate the "Apply" button
@@ -18,7 +17,6 @@ Feature: Validate various button types
     When I navigate to "<url>"
     Then I validate the "Undergraduate programs" button
     Then I validate the "Graduate programs" button
-    Then I verify that the buttons belong to the Explore pannel
     Examples:
       |                   url                              |
       | https://herbergerinstitute.asu.edu/degree-programs |

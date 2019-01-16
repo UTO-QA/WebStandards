@@ -142,10 +142,10 @@ public class WebStandardStep extends PageInjector {
         webStandardAction.validatePhotoStandards(tab);
     }
 
-    @After
-    public void TearDown(){
-        driver.close();
-        driver.quit();
-    }
+//    @After
+//    public void TearDown(){
+//        driver.close();
+//        driver.quit();
+//    }
 
 }
