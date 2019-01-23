@@ -24,7 +24,7 @@ public class WebStandardStep extends PageInjector {
     @Before
     public void setUp(){
         System.out.println("Before tag");
-        System.setProperty("webdriver.chrome.driver", "C:/Users/jrai4/Desktop/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/Users/jrai4/Downloads/chromedriver");
         driver = new ChromeDriver();
         initFluent(driver);
         initTest();
