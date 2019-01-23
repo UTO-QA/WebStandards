@@ -122,4 +122,24 @@ public class WebStandardAction extends WebStandardLocator {
         }
 
     }
+
+    public void verifyNavigationBarStandards(){
+        Assert.assertTrue("Global Nav Bar is missing", globalNavBar.isDisplayed());
+        Assert.assertEquals("Height of the nav bar is not correct","57px",globalNavBar.getElement().getCssValue("height"));
+//        Assert.assertEquals("Width of the nav bar is not correct","57px",globalNavBar.getElement().getCssValue("width"));
+        Assert.assertEquals("Display of the nav bar is not correct","block",globalNavBar.getElement().getCssValue("display"));
+    }
+
+    public void verifyTabItemsOnNavigationBar(String tab){
+        for(int i =0;i<=tabsOnAsuEdu().size();i++) {
+            if (tabsOnAsuEdu().get(i).getText().trim().equals(tab)) {
+
+                Assert.assertEquals("tab font-size is not correct","16px",tabsOnAsuEdu().get(i).getElement().getCssValue("font-size"));
+                Assert.assertEquals("tab font-family is not correct","Roboto",tabsOnAsuEdu().get(i).getElement().getCssValue("font-family"));
+                Assert.assertTrue("tab color without hover is not correct",tabsOnAsuEdu().get(i).getElement().getCssValue("color").contains("237, 237, 237, 1"));
+
+            }
+        }
+
+    }
 }

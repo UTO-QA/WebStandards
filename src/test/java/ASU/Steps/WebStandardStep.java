@@ -142,6 +142,17 @@ public class WebStandardStep extends PageInjector {
         webStandardAction.validatePhotoStandards(tab);
     }
 
+    @Then("^I verify the navigation bar standards$")
+    public void iVerifyTheNavigationBarStandards() throws Throwable {
+        webStandardAction.verifyNavigationBarStandards();
+
+    }
+
+    @Then("^I go to the \"([^\"]*)\" tab and verify the tab standards$")
+    public void iGoToTheTabAndVerifyTheTabStandards(String tab) throws Throwable {
+        webStandardAction.verifyTabItemsOnNavigationBar(tab);
+    }
+
 //    @After
 //    public void TearDown(){
 //        driver.close();
