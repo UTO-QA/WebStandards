@@ -137,7 +137,7 @@ public class WebStandardAction extends WebStandardLocator {
                 Assert.assertEquals("tab font-size is not correct","16px",tabsOnAsuEdu().get(i).getElement().getCssValue("font-size"));
                 Assert.assertEquals("tab font-family is not correct","Roboto",tabsOnAsuEdu().get(i).getElement().getCssValue("font-family"));
                 Assert.assertTrue("tab color without hover is not correct",tabsOnAsuEdu().get(i).getElement().getCssValue("color").contains("237, 237, 237, 1"));
-
+                break;
             }
         }
 
