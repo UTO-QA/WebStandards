@@ -142,4 +142,19 @@ public class WebStandardAction extends WebStandardLocator {
         }
 
     }
+
+
+    //region Global Footer Actions
+    public void ValidateInnovationBarIsGold()
+    {
+        Assert.assertTrue("Innovation bar is not gold",innovationBar.getElement().getCssValue("background-color").contains("255, 198, 39, 1"));
+    }
+
+    public void ValidateInnovationBarTextFormat()
+    {
+        Assert.assertTrue("Innovation bar text color is incorrect", innovationStatus.getElement().getCssValue("color").contains("0, 0, 0"));
+        Assert.assertTrue("Innovation bar font text is incorrect", innovationStatus.getElement().getCssValue("font-family").contains("Roboto, Helvetica Neue, Helvetica, Arial, sans-serif"));
+    }
+    //endregion
+
 }

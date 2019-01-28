@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f552ec43-af34-4b34-843c-077a0bb67889" name="Default Changelist" comment="" />
+    <list default="true" id="f552ec43-af34-4b34-843c-077a0bb67889" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ASU/Actions/WebStandardAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ASU/Actions/WebStandardAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ASU/Locators/WebStandardLocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ASU/Locators/WebStandardLocator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/ASU/features/Web_Standards_Footer.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/ASU/features/Web_Standards_Footer.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sample/Actions/TestAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sample/Locators/TestLocator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Sample/Steps/TestStep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Sample/Test.feature" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -10,92 +21,46 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1284316248">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.21" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="feature" value="280" />
-          <entry key="java" value="846" />
-          <entry key="xml" value="8" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="Cucumber" value="163" />
-          <entry key="JAVA" value="846" />
-          <entry key="Substeps" value="117" />
-          <entry key="XML" value="8" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="class" value="1" />
-          <entry key="feature" value="2" />
-          <entry key="java" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="5" />
-          <entry key="Substeps" value="2" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-1861549369">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ASU/Steps/WebStandardStep.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="55" column="10" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/Sample/WebStandard.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            <state relative-caret-position="-459">
+              <caret line="88" column="56" lean-forward="true" selection-start-line="88" selection-start-column="56" selection-end-line="88" selection-end-column="56" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Sample/Steps/WebStandardStep.java">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/ASU/features/Web_Standards_Footer.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-42">
-              <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+            <state relative-caret-position="68">
+              <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Sample/Locators/WebStandardLocator.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ASU/Locators/WebStandardLocator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+            <state relative-caret-position="306">
+              <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="n#!!doc;n#headerList#0;n#WebStandardLocator#0" />
+                <element signature="n#!!doc;n#globalFooter#0;n#WebStandardLocator#0" />
+                <element signature="n#!!doc;n#superFooter#0;n#WebStandardLocator#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ASU/Actions/WebStandardAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1635">
+              <caret line="141" column="9" lean-forward="true" selection-start-line="141" selection-start-column="9" selection-end-line="141" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,25 +69,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Sample/Actions/PageInjector.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ASU/Actions/PageInjector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Sample/Actions/WebStandardAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -152,7 +102,17 @@
         <option value="$PROJECT_DIR$/src/test/java/Sample/Steps/WebStandardStep.java" />
         <option value="$PROJECT_DIR$/src/main/java/Sample/Locators/TestLocator.java" />
         <option value="$PROJECT_DIR$/src/main/java/Sample/Locators/WebStandardLocator.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/ASU/features/Web_Standards_Footer.feature" />
+        <option value="$PROJECT_DIR$/src/main/java/ASU/Locators/WebStandardLocator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ASU/Actions/WebStandardAction.java" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
@@ -166,7 +126,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="15" />
     <option name="y" value="30" />
     <option name="width" value="1890" />
@@ -202,7 +162,88 @@
               <item name="WebStandards" type="b2602c69:ProjectViewProjectNode" />
               <item name="WebStandards" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebStandards" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebStandards" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ASU" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebStandards" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebStandards" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ASU" type="462c0819:PsiDirectoryNode" />
+              <item name="Actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebStandards" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebStandards" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ASU" type="462c0819:PsiDirectoryNode" />
+              <item name="Locators" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebStandards" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebStandards" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebStandards" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebStandards" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebStandards" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebStandards" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ASU" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebStandards" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebStandards" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ASU" type="462c0819:PsiDirectoryNode" />
+              <item name="Runner" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebStandards" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebStandards" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ASU" type="462c0819:PsiDirectoryNode" />
+              <item name="Steps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebStandards" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebStandards" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebStandards" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebStandards" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -211,7 +252,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539899858831" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548698516223" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -230,7 +271,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.CustomRunner">
     <configuration name="Scenario: run" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="1.2" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Sample/Test.feature" />
@@ -250,8 +291,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CustomRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WebStandards" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ASU.Runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ASU.Runner" />
+      <option name="MAIN_CLASS_NAME" value="ASU.Runner.CustomRunner" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CustomRunner" />
         <item itemvalue="Cucumber java.Scenario: run" />
       </list>
     </recent_temporary>
@@ -270,9 +326,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Scenario__run - 2018.10.04 at 13h 02m 42s.xml">
-      <configuration name="Scenario: run" configurationId="CucumberJavaRunConfigurationType" />
-    </history-entry>
     <history-entry file="Scenario__run - 2018.10.04 at 13h 10m 39s.xml">
       <configuration name="Scenario: run" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
@@ -300,12 +353,16 @@
     <history-entry file="Scenario__run - 2018.10.04 at 13h 32m 59s.xml">
       <configuration name="Scenario: run" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
+    <history-entry file="CustomRunner - 2019.01.27 at 19h 41m 39s.xml">
+      <configuration name="CustomRunner" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="20" width="1260" height="620" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2725" />
+      <window_info id="Learn" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20735608" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -314,15 +371,16 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2915811" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.40451744" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29144096" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40451744" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32854208" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.28277355" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32854208" />
+      <window_info anchor="right" id="Maven" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -360,9 +418,6 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" visible="true" weight="0.0" />
     </layout-to-restore>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -414,56 +469,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/Sample/WebStandard.feature" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Sample/Actions/PageInjector.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Sample/Actions/WebStandardAction.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Sample/Locators/WebStandardLocator.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/Sample/Steps/WebStandardStep.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
+        <state relative-caret-position="451">
           <caret line="55" column="10" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/Sample/WebStandard.feature">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ASU/Actions/PageInjector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Sample/Actions/PageInjector.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ASU/Runner/CustomRunner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="85">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ASU/Locators/WebStandardLocator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="n#!!doc;n#headerList#0;n#WebStandardLocator#0" />
+            <element signature="n#!!doc;n#globalFooter#0;n#WebStandardLocator#0" />
+            <element signature="n#!!doc;n#superFooter#0;n#WebStandardLocator#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/ASU/features/Web_Standards_Global_Navigation.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ASU/Actions/WebStandardAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1635">
+          <caret line="141" column="9" lean-forward="true" selection-start-line="141" selection-start-column="9" selection-end-line="141" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Sample/Actions/WebStandardAction.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/ASU/features/Web_Standards_Headers.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ASU/Steps/WebStandardStep.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#170#171#0" expanded="true" />
-            <element signature="e#195#196#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-459">
+          <caret line="88" column="56" lean-forward="true" selection-start-line="88" selection-start-column="56" selection-end-line="88" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Sample/Locators/WebStandardLocator.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/ASU/features/Web_Standards_Footer.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Sample/Steps/WebStandardStep.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-42">
-          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+        <state relative-caret-position="68">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
         </state>
       </provider>
     </entry>
