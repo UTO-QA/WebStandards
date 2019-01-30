@@ -145,16 +145,28 @@ public class WebStandardAction extends WebStandardLocator {
 
 
     //region Global Footer Actions
-    public void ValidateInnovationBarIsGold()
+    public void validateInnovationBarIsGold()
     {
         Assert.assertTrue("Innovation bar is not gold",innovationBar.getElement().getCssValue("background-color").contains("255, 198, 39, 1"));
     }
 
-    public void ValidateInnovationBarTextFormat()
+    public void validateInnovationBarTextFormat()
     {
         Assert.assertTrue("Innovation bar text color is incorrect", innovationStatus.getElement().getCssValue("color").contains("0, 0, 0"));
         Assert.assertTrue("Innovation bar font text is incorrect", innovationStatus.getElement().getCssValue("font-family").contains("Roboto, Helvetica Neue, Helvetica, Arial, sans-serif"));
     }
+
+    public void validateGlobalFooterIsDisplayed()
+    {
+        Assert.assertTrue("The footer is not displayed",globalFooter.isDisplayed());
+    }
+
+    public void validateUSNewsBestCollegesLogoIsDisplayed() throws Exception
+    {
+        Thread.sleep(5000);
+        Assert.assertTrue("The U.S. News Best Colleges Logo is not displayed", usNewsBestCollegesLogo.isDisplayed());
+    }
+
     //endregion
 
 }
