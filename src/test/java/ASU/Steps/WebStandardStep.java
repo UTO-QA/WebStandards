@@ -2,18 +2,23 @@ package ASU.Steps;
 
 import ASU.Actions.PageInjector;
 import ASU.Locators.WebStandardLocator;
+import ASU.Actions.WebStandardAction;
 import cucumber.api.PendingException;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import org.fluentlenium.core.domain.FluentWebElement;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class WebStandardStep extends PageInjector {
 
@@ -24,8 +29,11 @@ public class WebStandardStep extends PageInjector {
     @Before
     public void setUp(){
         System.out.println("Before tag");
-        System.setProperty("webdriver.chrome.driver", "/Users/jrai4/Downloads/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/Users/ehender2/chromedriver.exe");
         driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS) ;
+//        driver.get("https://www.asu.edu");
+//        WebElement myDynamicElement = driver.findElement(By.id("asu_logo"));
         initFluent(driver);
         initTest();
 
@@ -153,10 +161,76 @@ public class WebStandardStep extends PageInjector {
         webStandardAction.verifyTabItemsOnNavigationBar(tab);
     }
 
-//    @After
-//    public void TearDown(){
-//        driver.close();
-//        driver.quit();
-//    }
+    @When("^I validate the footer is displayed$")
+    public void iValidateTheFooterIsDisplayed() throws Throwable{
+        webStandardAction.validateGlobalFooterIsDisplayed();
+    }
+
+    @Then("^Verify the following options are listed in the footer \"([^\"]*)\"$")
+    public void verifyTheFollowingOptionsAreListedInTheFooter(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
+
+    @Then("^Verify the 2017 U.S. News & World Report logo is displayed in the footer$")
+    public void verifyThe2017USNewsAndWorldReportLogoIsDisplayedInTheFooter() throws Throwable {
+        webStandardAction.validateUSNewsBestCollegesLogoIsDisplayed();
+
+    }
+
+    @Then("^Verify the \"([^\"]*)\" is displayed in the footer$")
+    public void verifyTheIsDisplayedInTheFooter(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
+
+    @Then("^the background color the universal footer should be #E(\\d+)E(\\d+)E(\\d+)$")
+    public void theBackgroundColorTheUniversalFooterShouldBeEEE(int arg0, int arg1, int arg2) {
+
+    }
+
+    @Then("^the gray bary on the universal footer should have a height of (\\d+)px$")
+    public void theGrayBaryOnTheUniversalFooterShouldHaveAHeightOfPx(int arg0) {
+
+    }
+
+    @Then("^the universal footer's font size should be (\\d+)px$")
+    public void theUniversalFooterSFontSizeShouldBePx(int arg0) {
+
+    }
+
+    @Then("^the universal footer's font weight should be (\\d+)$")
+    public void theUniversalFooterSFontWeightShouldBe(int arg0) {
+
+    }
+
+    @Then("^the gold bar on the universal footer should have a height of (\\d+) px$")
+    public void theGoldBarOnTheUniversalFooterShouldHaveAHeightOfPx(int arg0) {
+
+    }
+
+    @Then("^the link color in the universal footer should be #(\\d+)$")
+    public void theLinkColorInTheUniversalFooterShouldBe(int arg0) {
+
+    }
+
+    @Then("^I verify the ranking url is displayed in the footer$")
+    public void iVerifyTheRankingUrlIsDisplayedInTheFooter() {
+
+    }
+
+    @Then("^I verify the given style standards for the footer$")
+    public void iVerifyTheGivenStyleStandardsForTheFooter() {
+
+    }
+
+    
+    
+/*    @After
+    public void TearDown(){
+        driver.close();
+        driver.quit();
+    }*/
+
 
 }
