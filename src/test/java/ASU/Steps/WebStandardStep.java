@@ -31,9 +31,8 @@ public class WebStandardStep extends PageInjector {
         System.out.println("Before tag");
         System.setProperty("webdriver.chrome.driver", "/Users/ehender2/chromedriver.exe");
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS) ;
-//        driver.get("https://www.asu.edu");
-//        WebElement myDynamicElement = driver.findElement(By.id("asu_logo"));
         initFluent(driver);
         initTest();
 
@@ -169,7 +168,7 @@ public class WebStandardStep extends PageInjector {
     @Then("^Verify the following options are listed in the footer \"([^\"]*)\"$")
     public void verifyTheFollowingOptionsAreListedInTheFooter(String arg0) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+
     }
 
     @Then("^Verify the 2017 U.S. News & World Report logo is displayed in the footer$")
@@ -179,50 +178,78 @@ public class WebStandardStep extends PageInjector {
     }
 
     @Then("^Verify the \"([^\"]*)\" is displayed in the footer$")
-    public void verifyTheIsDisplayedInTheFooter(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void verifyTheIsDisplayedInTheFooter(List<String> elements) throws Throwable {
+            WebStandardLocator webStandardLocator = new WebStandardLocator();
+            for(int i =0;i<elements.size();i++) {
+                List<FluentWebElement> subList = new ArrayList<FluentWebElement>();
+                for (FluentWebElement element : webStandardLocator.headerList()) {
+                    subList = element.find("a");
+                    Assert.assertTrue(subList.get(0).getText().contains(elements.get(i)));
+                }
+            }
+
+            throw new PendingException();
+        }
+
+
+    @Then("^Verify \"([^\"]*)\" is displayed in the footer$")
+    public void verifyIsDisplayedInTheFooter(String arg0) throws Throwable {
+        webStandardAction.validateASUInnovationRankingStatus();
     }
 
-    @Then("^the background color the universal footer should be #E(\\d+)E(\\d+)E(\\d+)$")
-    public void theBackgroundColorTheUniversalFooterShouldBeEEE(int arg0, int arg1, int arg2) {
+//    @Then("^Verify the background color for the footer menu is \"([^\"]*)\"$")
+//    public void verifyTheBackgroundColorForTheFooterMenuIs() throws Throwable {
+//        webStandardAction.validateFooterMenuBackgroundColor();
+//
+//    }
+//
+//    @Then("^Verify the background color for the footer menu is #E(\\d+)E(\\d+)E(\\d+)$")
+//    public void verifyTheBackgroundColorForTheFooterMenuIsEEE(int arg0, int arg1, int arg2) {
+//        webStandardAction.validateFooterMenuBackgroundColor();
+//    }
+
+    @Then("^Verify the background color for the footer menu is gray$")
+    public void verifyTheBackgroundColorForTheFooterMenuIsGray() {
+        webStandardAction.validateFooterMenuBackgroundColor();
+    }
+
+
+    @Then("^the gray bar on the universal footer should have a height of \"([^\"]*)\"$")
+    public void theGrayBarOnTheUniversalFooterShouldHaveAHeightOf(String heightPx) throws Throwable {
+        webStandardAction.validateFooterMenuHeight(heightPx);
+    }
+
+    @Then("^the universal footer's font size should be \"([^\"]*)\"$")
+    public void theUniversalFooterSFontSizeShouldBe(String footerFontSize) throws Throwable {
+        webStandardAction.validateFooterMenuFontSize(footerFontSize);
+    }
+
+    @Then("^the universal footer's font weight should be \"([^\"]*)\"$")
+    public void theUniversalFooterSFontWeightShouldBe(String fontWeight) throws Throwable {
+        webStandardAction.validateFooterMenuFontWeight(fontWeight);
 
     }
 
-    @Then("^the gray bary on the universal footer should have a height of (\\d+)px$")
-    public void theGrayBaryOnTheUniversalFooterShouldHaveAHeightOfPx(int arg0) {
-
+    @Then("^the innovation gold bar in the footer should have a height of \"([^\"]*)\"$")
+    public void theInnovationGoldBarInTheFooterShouldHaveAHeightOf(String goldBarHeightSize) throws Throwable {
+        webStandardAction.validateInnovationBarHeight(goldBarHeightSize);
     }
 
-    @Then("^the universal footer's font size should be (\\d+)px$")
-    public void theUniversalFooterSFontSizeShouldBePx(int arg0) {
-
+    @Then("^the innovation bar background color should be gold$")
+    public void theInnovationBarBackgroundColorShouldBeGold()
+    {
+        webStandardAction.validateInnovationBarIsGold();
     }
 
-    @Then("^the universal footer's font weight should be (\\d+)$")
-    public void theUniversalFooterSFontWeightShouldBe(int arg0) {
-
+    @Then("^the innovation ranking status font family should be the correct font family and in black$")
+    public void theInnovationRankingStatusFontFamilyShouldBeTheCorrectFontFamilyAndInBlack()
+    {
+        webStandardAction.validateInnovationBarTextFormat();
     }
 
-    @Then("^the gold bar on the universal footer should have a height of (\\d+) px$")
-    public void theGoldBarOnTheUniversalFooterShouldHaveAHeightOfPx(int arg0) {
 
-    }
 
-    @Then("^the link color in the universal footer should be #(\\d+)$")
-    public void theLinkColorInTheUniversalFooterShouldBe(int arg0) {
 
-    }
-
-    @Then("^I verify the ranking url is displayed in the footer$")
-    public void iVerifyTheRankingUrlIsDisplayedInTheFooter() {
-
-    }
-
-    @Then("^I verify the given style standards for the footer$")
-    public void iVerifyTheGivenStyleStandardsForTheFooter() {
-
-    }
 
     
     

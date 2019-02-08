@@ -1,10 +1,13 @@
 package ASU.Actions;
 
 import ASU.Locators.WebStandardLocator;
+import cucumber.api.PendingException;
+import net.sourceforge.htmlunit.corejs.javascript.ast.IfStatement;
 import org.fluentlenium.core.domain.FluentWebElement;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class WebStandardAction extends WebStandardLocator {
@@ -19,6 +22,7 @@ public class WebStandardAction extends WebStandardLocator {
 
     public void verifyHeaderBackground(){
         Assert.assertTrue(find(".asu_hdr_white").size()!=0);
+       // Assert.assertTrue("The U.S. News Best Colleges Logo is not displayed", usNewsBestCollegesLogo.isDisplayed());
     }
 
     public boolean clickOnLinks(String name){
@@ -147,24 +151,55 @@ public class WebStandardAction extends WebStandardLocator {
     //region Global Footer Actions
     public void validateInnovationBarIsGold()
     {
-        Assert.assertTrue("Innovation bar is not gold",innovationBar.getElement().getCssValue("background-color").contains("255, 198, 39, 1"));
+        Assert.assertTrue("Innovation bar is not gold" + innovationBar.getElement().getCssValue("background-color"),innovationBar.getElement().getCssValue("background-color").contains("255, 198, 39, 1"));
     }
 
     public void validateInnovationBarTextFormat()
     {
-        Assert.assertTrue("Innovation bar text color is incorrect", innovationStatus.getElement().getCssValue("color").contains("0, 0, 0"));
-        Assert.assertTrue("Innovation bar font text is incorrect", innovationStatus.getElement().getCssValue("font-family").contains("Roboto, Helvetica Neue, Helvetica, Arial, sans-serif"));
+        Assert.assertTrue("Innovation bar text color is not black; it's "+ innovationRankingStatus.getElement().getCssValue("color"), innovationRankingStatus.getElement().getCssValue("color").contains("0, 0, 0"));
+        Assert.assertTrue("Innovation bar font text is not the correct font family; it's " + innovationRankingStatus.getElement().getCssValue("font-family"), innovationRankingStatus.getElement().getCssValue("font-family").contains("Roboto,\"Helvetica Neue\",Helvetica,Arial,sans-serif"));
     }
 
     public void validateGlobalFooterIsDisplayed()
     {
         Assert.assertTrue("The footer is not displayed",globalFooter.isDisplayed());
+        Assert.assertTrue("The U.S. News Best Colleges Logo is not displayed", usNewsBestCollegesLogo.isDisplayed());
     }
 
     public void validateUSNewsBestCollegesLogoIsDisplayed() throws Exception
     {
         Thread.sleep(5000);
         Assert.assertTrue("The U.S. News Best Colleges Logo is not displayed", usNewsBestCollegesLogo.isDisplayed());
+    }
+
+    public void validateASUInnovationRankingStatus() throws Exception
+    {
+        Assert.assertTrue("ASU's Ranking Status is not displayed", innovationRankingStatus.isDisplayed());
+    }
+
+    public void validateFooterMenuBackgroundColor()
+    {
+        Assert.assertTrue("Footer Menu Background color is not #E5E5E5, it's " + footerMenu.getElement().getCssValue("background-color"), footerMenu.getElement().getCssValue("background-color").contains("229, 229, 229, 1"));
+    }
+
+    public void validateFooterMenuHeight(String heightPx)
+    {
+        Assert.assertTrue("Footer Menu height is not 56px; it's "+ footerMenu.getElement().getCssValue("height"),footerMenu.getElement().getCssValue("height").contains(heightPx));
+    }
+
+    public void validateFooterMenuFontSize(String fontPx)
+    {
+        Assert.assertTrue("Footer menu font size is not 16px; it's " + footerMenuLocator.getElement().getCssValue("font-size"), footerMenuLocator.getElement().getCssValue("font-size").contains(fontPx));
+    }
+
+    public void validateFooterMenuFontWeight(String fontWeight)
+    {
+        Assert.assertTrue("Footer menu font weight is not 200; it's " + footerMenuLocator.getElement().getCssValue("font-weight"),footerMenuLocator.getElement().getCssValue("font-weight").contains(fontWeight));
+    }
+
+    public void validateInnovationBarHeight(String innovationBarHeight)
+    {
+        Assert.assertTrue("The innovation bar height is not 56px; it's " + innovationBar.getElement().getCssValue("height"), innovationBar.getElement().getCssValue("height").contains(innovationBarHeight));
     }
 
     //endregion
