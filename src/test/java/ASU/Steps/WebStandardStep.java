@@ -11,15 +11,11 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.fluentlenium.core.domain.FluentWebElement;
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 public class WebStandardStep extends PageInjector {
 
 
@@ -29,11 +25,10 @@ public class WebStandardStep extends PageInjector {
     @Before
     public void setUp(){
         System.out.println("Before tag");
-        System.setProperty("webdriver.chrome.driver", "/Users/ehender2/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/Users/jrai4/Downloads/chromedriver");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS) ;
-//        driver.get("https://www.asu.edu");
-//        WebElement myDynamicElement = driver.findElement(By.id("asu_logo"));
+        driver.manage().window().maximize();
         initFluent(driver);
         initTest();
 
@@ -223,6 +218,23 @@ public class WebStandardStep extends PageInjector {
     public void iVerifyTheGivenStyleStandardsForTheFooter() {
 
     }
+
+    @Then("^I verify the standard for super footer$")
+    public void iVerifyTheStandardForSuperFooter() {
+        webStandardAction.verifySuperFooterStandards();
+
+    }
+
+    @Then("^I verify the content style standard for super footer$")
+    public void iVerifyTheContentStyleStandardForSuperFooter() {
+        webStandardAction.verifyContentStandardsofSuperFooter();
+    }
+
+    @Then("^I verify the style standards for the the social  media icons$")
+    public void iVerifyTheStyleStandardsForTheTheSocialMediaIcons() {
+         webStandardAction.verifySocialMediaStandards();
+    }
+
 
     
     
