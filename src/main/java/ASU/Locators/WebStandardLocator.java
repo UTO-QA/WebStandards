@@ -100,5 +100,9 @@ public class WebStandardLocator extends FluentPage {
         return find(".fat-footer-block .contact-info .dgtl-mkting-101 li a");
     }
 
+    //link on asu.edu
+    @FindBy(css="#carousels .items .item.col-1 .field-title a")
+    public FluentWebElement firstLinkinText;
+
 
 }

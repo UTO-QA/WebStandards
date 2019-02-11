@@ -188,4 +188,15 @@ public class WebStandardAction extends WebStandardLocator {
        }
     }
 
+    public void verifyLinkTypographyStandards(){
+        Assert.assertEquals("Link border bottom-style is not correcr","dotted",firstLinkinText.getElement().getCssValue("border-bottom-style"));
+        Assert.assertTrue("Link color is not correct",firstLinkinText.getElement().getCssValue("color").contains("140, 29, 64, 1"));
+        Assert.assertTrue("Link border bottom color is not correct",firstLinkinText.getElement().getCssValue("border-bottom-color").contains("140, 29, 64, 1"));
+        Assert.assertTrue("Link text decoration is not correct",firstLinkinText.getElement().getCssValue("text-decoration").contains("none"));
+        Assert.assertEquals("Link transition property is not correct","all",firstLinkinText.getElement().getCssValue("transition-property"));
+        Assert.assertEquals("Link transition function is not correct","ease-in-out",firstLinkinText.getElement().getCssValue("transition-timing-function"));
+        Assert.assertEquals("Link transition duration is not correct","0.25s",firstLinkinText.getElement().getCssValue("transition-duration"));
+        Assert.assertEquals("Link transition delay is not correct","0s",firstLinkinText.getElement().getCssValue("transition-delay"));
+    }
+
 }

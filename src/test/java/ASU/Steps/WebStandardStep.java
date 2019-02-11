@@ -235,6 +235,12 @@ public class WebStandardStep extends PageInjector {
          webStandardAction.verifySocialMediaStandards();
     }
 
+    @Then("^I verify the link typography standards for the first link in the carousel bar$")
+    public void verifyLinkTypography() throws Throwable {
+        webStandardAction.verifyLinkTypographyStandards();
+
+    }
+
 
     
     
