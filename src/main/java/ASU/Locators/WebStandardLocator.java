@@ -94,8 +94,15 @@ public class WebStandardLocator extends FluentPage {
     //endregion
 
     //region Super Footer
-    @FindBy(id="page-footer")
+    @FindBy(css=".fat-footer-block")
     public FluentWebElement superFooter;
-    //endregion
+
+    @FindBy(css=".fat-footer-block .contact-info .microdata")
+    public FluentWebElement superFooterContent;
+
+    public List<FluentWebElement> socialMediaIconList(){
+        return find(".fat-footer-block .contact-info .dgtl-mkting-101 li a");
+    }
+
 
 }

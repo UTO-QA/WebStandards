@@ -1,13 +1,10 @@
 package ASU.Actions;
 
 import ASU.Locators.WebStandardLocator;
-import cucumber.api.PendingException;
-import net.sourceforge.htmlunit.corejs.javascript.ast.IfStatement;
 import org.fluentlenium.core.domain.FluentWebElement;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class WebStandardAction extends WebStandardLocator {
@@ -22,7 +19,6 @@ public class WebStandardAction extends WebStandardLocator {
 
     public void verifyHeaderBackground(){
         Assert.assertTrue(find(".asu_hdr_white").size()!=0);
-       // Assert.assertTrue("The U.S. News Best Colleges Logo is not displayed", usNewsBestCollegesLogo.isDisplayed());
     }
 
     public boolean clickOnLinks(String name){
@@ -203,5 +199,24 @@ public class WebStandardAction extends WebStandardLocator {
     }
 
     //endregion
+    public void verifySuperFooterStandards(){
+       Assert.assertTrue("Super footer background-color is not black",superFooter.getElement().getCssValue("background-color").contains("30, 30, 30, 1"));
+       Assert.assertEquals("Super footer font size is not correct","16px",superFooter.getElement().getCssValue("font-size"));
+
+    }
+
+    public void verifyContentStandardsofSuperFooter(){
+        Assert.assertEquals("Super footer font size is not correct","16px",superFooterContent.getElement().getCssValue("font-size"));
+        Assert.assertTrue("Super footer background-color is not black",superFooterContent.getElement().getCssValue("color").contains("255, 255, 255, 1"));
+        Assert.assertEquals("Super footer font size is not correct","Roboto",superFooterContent.getElement().getCssValue("font-family"));
+    }
+
+    public void verifySocialMediaStandards(){
+       for(int i =0;i<socialMediaIconList().size();i++){
+           Assert.assertEquals("Social media icon font size is not correct","38px",socialMediaIconList().get(i).getElement().getCssValue("font-size"));
+           Assert.assertTrue("Social media icon color is not grey",socialMediaIconList().get(i).getElement().getCssValue("color").contains("204, 204, 204, 1"));
+           Assert.assertEquals("Social media icon font size is not correct","FontAwesome",socialMediaIconList().get(i).getElement().getCssValue("font-family"));
+       }
+    }
 
 }
