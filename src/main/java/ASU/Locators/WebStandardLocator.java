@@ -74,8 +74,8 @@ public class WebStandardLocator extends FluentPage {
     @FindBy(className =".innovation-top")
     public FluentWebElement innovationTop;
 
-    @FindBy(className =".innovation-status a span")
-    public FluentWebElement innovationStatus;
+    @FindBy(css ="#innovation-bar .innovation-top .innovation-status a span")
+    public FluentWebElement innovationRankingStatus;
 
     @FindBy(css =".innovation-hidden a img")
     public FluentWebElement usNewsBestCollegesLogo;
@@ -87,6 +87,10 @@ public class WebStandardLocator extends FluentPage {
 
         return find("#innovation-footer .footer-menu ul li a");
     }
+
+    @FindBy (css = "#innovation-footer .footer-menu ul li a")
+    public  FluentWebElement footerMenuLocator;
+
     //endregion
 
     //region Super Footer
