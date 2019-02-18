@@ -15,6 +15,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,10 +31,13 @@ public class WebStandardStep extends PageInjector {
     public void setUp(){
         System.out.println("Before tag");
         System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS) ;
-        initFluent(driver);
+     //   driver = new ChromeDriver();
+       // driver = new ChromeDriver();
+        sharedDriver = new ChromeDriver();
+        sharedDriver.manage().window().maximize();
+        sharedDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS) ;
+        driver = sharedDriver;
+        initFluent(sharedDriver);
         initTest();
 
     }
@@ -272,11 +276,10 @@ public class WebStandardStep extends PageInjector {
 
     
     
-/*    @After
+    @After
     public void TearDown(){
         driver.close();
-        driver.quit();
-    }*/
-
-
+      //  driver.quit();
+    //    driver = null;
+    }
 }
