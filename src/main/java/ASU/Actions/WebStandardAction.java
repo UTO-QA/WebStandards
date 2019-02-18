@@ -111,11 +111,15 @@ public class WebStandardAction extends WebStandardLocator {
         }
     }
 
+    public boolean isJpgOrPng(String source) {
+        return (source.contains(".jpg") || source.contains(".png"));
+    }
     public void validatePhotoStandards(String tab){
         for(int i =0;i<=tabsOnAsuEdu().size();i++){
             if(tabsOnAsuEdu().get(i).getText().trim().equals(tab)){
                 tabsOnAsuEdu().get(i).click();
                 String source = imagesOnAsuEdu().get(i).getAttribute("src");
+                Assert.assertTrue("Image File Extension is not jpg or png",isJpgOrPng(source));
                 Assert.assertEquals("Image width is not correct",imagesOnAsuEdu().get(i).getAttribute("width"),"1920");
                 Assert.assertEquals("Image height is not correct",imagesOnAsuEdu().get(i).getAttribute("height"),"1080");
             }

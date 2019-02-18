@@ -29,7 +29,7 @@ public class WebStandardStep extends PageInjector {
     @Before
     public void setUp(){
         System.out.println("Before tag");
-        System.setProperty("webdriver.chrome.driver", "/Users/ehender2/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS) ;
