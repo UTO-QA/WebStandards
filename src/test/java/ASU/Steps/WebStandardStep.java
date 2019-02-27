@@ -30,12 +30,12 @@ public class WebStandardStep extends PageInjector {
     @Before
     public void setUp(){
         System.out.println("Before tag");
-        System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\ehender2\\chromedriver.exe");
      //   driver = new ChromeDriver();
        // driver = new ChromeDriver();
         sharedDriver = new ChromeDriver();
         sharedDriver.manage().window().maximize();
-        sharedDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS) ;
+        sharedDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS) ;
         driver = sharedDriver;
         initFluent(sharedDriver);
         initTest();
@@ -201,43 +201,6 @@ public class WebStandardStep extends PageInjector {
         webStandardAction.validateASUInnovationRankingStatus();
     }
 
-//    @Then("^Verify the background color for the footer menu is \"([^\"]*)\"$")
-//    public void verifyTheBackgroundColorForTheFooterMenuIs() throws Throwable {
-//        webStandardAction.validateFooterMenuBackgroundColor();
-//
-//    }
-//
-//    @Then("^Verify the background color for the footer menu is #E(\\d+)E(\\d+)E(\\d+)$")
-//    public void verifyTheBackgroundColorForTheFooterMenuIsEEE(int arg0, int arg1, int arg2) {
-//        webStandardAction.validateFooterMenuBackgroundColor();
-//    }
-
-    @Then("^Verify the background color for the footer menu is gray$")
-    public void verifyTheBackgroundColorForTheFooterMenuIsGray() {
-        webStandardAction.validateFooterMenuBackgroundColor();
-    }
-
-
-    @Then("^the gray bar on the universal footer should have a height of \"([^\"]*)\"$")
-    public void theGrayBarOnTheUniversalFooterShouldHaveAHeightOf(String heightPx) throws Throwable {
-        webStandardAction.validateFooterMenuHeight(heightPx);
-    }
-
-    @Then("^the universal footer's font size should be \"([^\"]*)\"$")
-    public void theUniversalFooterSFontSizeShouldBe(String footerFontSize) throws Throwable {
-        webStandardAction.validateFooterMenuFontSize(footerFontSize);
-    }
-
-    @Then("^the universal footer's font weight should be \"([^\"]*)\"$")
-    public void theUniversalFooterSFontWeightShouldBe(String fontWeight) throws Throwable {
-        webStandardAction.validateFooterMenuFontWeight(fontWeight);
-
-    }
-
-    @Then("^the innovation gold bar in the footer should have a height of \"([^\"]*)\"$")
-    public void theInnovationGoldBarInTheFooterShouldHaveAHeightOf(String goldBarHeightSize) throws Throwable {
-        webStandardAction.validateInnovationBarHeight(goldBarHeightSize);
-    }
 
     @Then("^the innovation bar background color should be gold$")
     public void theInnovationBarBackgroundColorShouldBeGold()
@@ -281,5 +244,14 @@ public class WebStandardStep extends PageInjector {
         driver.close();
       //  driver.quit();
     //    driver = null;
+    }
+
+    @Then("^Verify the footer is in the correct format$")
+    public void verifyTheFooterIsInTheCorrectFormat()
+    {
+        webStandardAction.validateFooterFormat();
+        webStandardAction.validateInnovationBarIsGold();
+        webStandardAction.validateInnovationBarTextFormat();
+
     }
 }

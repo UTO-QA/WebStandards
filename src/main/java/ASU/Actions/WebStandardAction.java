@@ -151,7 +151,7 @@ public class WebStandardAction extends WebStandardLocator {
     //region Global Footer Actions
     public void validateInnovationBarIsGold()
     {
-        Assert.assertTrue("Innovation bar is not gold" + innovationBar.getElement().getCssValue("background-color"),innovationBar.getElement().getCssValue("background-color").contains("255, 198, 39, 1"));
+        Assert.assertTrue("Innovation bar is not gold, the Innovation bar is: " + innovationBar.getElement().getCssValue("background-color"),innovationBar.getElement().getCssValue("background-color").contains("255, 198, 39, 1"));
     }
 
     public void validateInnovationBarTextFormat()
@@ -177,30 +177,15 @@ public class WebStandardAction extends WebStandardLocator {
         Assert.assertTrue("ASU's Ranking Status is not displayed", innovationRankingStatus.isDisplayed());
     }
 
-    public void validateFooterMenuBackgroundColor()
+    public void validateFooterFormat()
     {
         Assert.assertTrue("Footer Menu Background color is not #E5E5E5, it's " + footerMenu.getElement().getCssValue("background-color"), footerMenu.getElement().getCssValue("background-color").contains("229, 229, 229, 1"));
+        Assert.assertTrue("Footer Menu height is not 56px; it's "+ footerMenu.getElement().getCssValue("height"),footerMenu.getElement().getCssValue("height").contains("56px"));
+        Assert.assertTrue("Footer menu font size is not 16px; it's " + footerMenuLocator.getElement().getCssValue("font-size"), footerMenuLocator.getElement().getCssValue("font-size").contains("16px"));
+        Assert.assertTrue("Footer menu font weight is not 200; it's " + footerMenuLocator.getElement().getCssValue("font-weight"),footerMenuLocator.getElement().getCssValue("font-weight").contains("200"));
+        Assert.assertTrue("The innovation bar height is not 56px; it's " + innovationBar.getElement().getCssValue("height"), innovationBar.getElement().getCssValue("height").contains("56px"));
     }
 
-    public void validateFooterMenuHeight(String heightPx)
-    {
-        Assert.assertTrue("Footer Menu height is not 56px; it's "+ footerMenu.getElement().getCssValue("height"),footerMenu.getElement().getCssValue("height").contains(heightPx));
-    }
-
-    public void validateFooterMenuFontSize(String fontPx)
-    {
-        Assert.assertTrue("Footer menu font size is not 16px; it's " + footerMenuLocator.getElement().getCssValue("font-size"), footerMenuLocator.getElement().getCssValue("font-size").contains(fontPx));
-    }
-
-    public void validateFooterMenuFontWeight(String fontWeight)
-    {
-        Assert.assertTrue("Footer menu font weight is not 200; it's " + footerMenuLocator.getElement().getCssValue("font-weight"),footerMenuLocator.getElement().getCssValue("font-weight").contains(fontWeight));
-    }
-
-    public void validateInnovationBarHeight(String innovationBarHeight)
-    {
-        Assert.assertTrue("The innovation bar height is not 56px; it's " + innovationBar.getElement().getCssValue("height"), innovationBar.getElement().getCssValue("height").contains(innovationBarHeight));
-    }
 
     //endregion
     public void verifySuperFooterStandards(){
