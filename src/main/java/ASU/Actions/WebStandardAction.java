@@ -219,4 +219,32 @@ public class WebStandardAction extends WebStandardLocator {
         Assert.assertEquals("Link transition delay is not correct","0s",firstLinkinText.getElement().getCssValue("transition-delay"));
     }
 
+    public void verifyNavigationToPage(String page){
+        switch (page){
+            case "login" :
+                Assert.assertTrue("User was not redirected to myasu login",getDriver().getCurrentUrl().contains("https://weblogin.asu.edu/cas/login"));
+                Assert.assertTrue(loginContainer.isDisplayed());
+                break;
+            case "Colleges and Schools":
+                Assert.assertEquals("User was not redirected to Schools and College page","https://www.asu.edu/about/colleges-and-schools",getDriver().getCurrentUrl());
+                break;
+            case "Maps":
+                Assert.assertEquals("User was not redirected to maps page","https://www.asu.edu/map/interactive/",getDriver().getCurrentUrl());
+                break;
+            case "Directory":
+                Assert.assertEquals("User was not redirected to directory page","https://isearch.asu.edu/asu-people/", getDriver().getCurrentUrl());
+                break;
+        }
+    }
+
+   public void verifyElementonPage(String element){
+       switch (element){
+           case "header":
+               Assert.assertTrue(find(".asu_hdr_white").size()!=0);
+               break;
+           case "logo":
+               Assert.assertTrue(logo.getAttribute("src").equals("https://www.asu.edu/asuthemes/4.6/assets/full_logo.png"));
+               break;
+       }
+   }
 }

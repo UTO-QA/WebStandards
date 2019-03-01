@@ -30,7 +30,7 @@ public class WebStandardStep extends PageInjector {
     @Before
     public void setUp(){
         System.out.println("Before tag");
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\ehender2\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/Users/jrai4/Downloads/chromedriver");
      //   driver = new ChromeDriver();
        // driver = new ChromeDriver();
         sharedDriver = new ChromeDriver();
@@ -236,8 +236,6 @@ public class WebStandardStep extends PageInjector {
         webStandardAction.verifySocialMediaStandards();
     }
 
-
-    
     
     @After
     public void TearDown(){
@@ -253,5 +251,15 @@ public class WebStandardStep extends PageInjector {
         webStandardAction.validateInnovationBarIsGold();
         webStandardAction.validateInnovationBarTextFormat();
 
+    }
+
+    @Then("^User should be navigated to \"([^\"]*)\" page$")
+    public void userShouldBeNavigatedToPage(String page) throws Throwable {
+        webStandardAction.verifyNavigationToPage(page);
+    }
+
+    @Then("^Verify the element \"([^\"]*)\"$")
+    public void verifyTheElement(String element) throws Throwable {
+            webStandardAction.verifyElementonPage(element);
     }
 }
