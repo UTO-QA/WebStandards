@@ -77,12 +77,22 @@ public class WebStandardAction extends WebStandardLocator {
         click(globalSearchBox);
         globalSearchBox.fill().with(keyword);
         globalSearchBox.getElement().sendKeys(Keys.ENTER);
-        Assert.assertTrue(searchResults.getText().contains(keyword));
+        if(getDriver().getCurrentUrl().contains("search.asu.edu")) {
+            Assert.assertTrue(searchResults.getText().contains(keyword));
+        }
+        else {
+            Assert.assertTrue(getDriver().getCurrentUrl().equals("https://admission.asu.edu/search/"+keyword));
+        }
     }
 
     public void verifySearchResults(String keyword){
-        Assert.assertTrue(searchResultBar.isDisplayed());
-        Assert.assertTrue(searchResults.getText().contains(keyword));
+        if(getDriver().getCurrentUrl().contains("search.asu.edu")) {
+            Assert.assertTrue(searchResultBar.isDisplayed());
+            Assert.assertTrue(searchResults.getText().contains(keyword));
+        }
+        else if(getDriver().getCurrentUrl().equals("https://admission.asu.edu/search/"+keyword)){
+            Assert.assertTrue(admissionSearchResultBar.getAttribute("value").equals(keyword));
+        }
     }
 
     public void clickASULogo(){

@@ -43,6 +43,9 @@ public class WebStandardLocator extends FluentPage {
     @FindBy(css=".search-header")
     public FluentWebElement searchResultBar;
 
+    @FindBy(css=".form-item-search-keys input")
+    public FluentWebElement admissionSearchResultBar;
+
     @FindBy(css=".fa.fa-home")
     public FluentWebElement homeIcon;
 
